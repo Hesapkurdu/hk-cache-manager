@@ -1,0 +1,48 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28729.10
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sample.AspNetCore", "samples\Sample.AspNetCore\Sample.AspNetCore.csproj", "{F2CB47BE-3078-4DF1-8210-43F5542FC2A6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{6EE60173-6BCC-49B4-9C9D-7EA7E5080437}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{02EF75F0-C2C3-450E-A627-9D54AF5BA954}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "samples", "samples", "{AC421317-D528-4D1D-B0CD-9F3252D06037}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hk.RedisCache", "src\Hk.RedisCache\Hk.RedisCache.csproj", "{2CC14A83-1064-49C4-9C74-B41E8ED5EB15}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hk.RedisCacheTests", "tests\Hk.RedisCacheTests\Hk.RedisCacheTests.csproj", "{402D7911-28BD-46A1-8B92-3FDE9F3A4728}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F2CB47BE-3078-4DF1-8210-43F5542FC2A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2CB47BE-3078-4DF1-8210-43F5542FC2A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2CB47BE-3078-4DF1-8210-43F5542FC2A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2CB47BE-3078-4DF1-8210-43F5542FC2A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2CC14A83-1064-49C4-9C74-B41E8ED5EB15}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2CC14A83-1064-49C4-9C74-B41E8ED5EB15}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2CC14A83-1064-49C4-9C74-B41E8ED5EB15}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2CC14A83-1064-49C4-9C74-B41E8ED5EB15}.Release|Any CPU.Build.0 = Release|Any CPU
+		{402D7911-28BD-46A1-8B92-3FDE9F3A4728}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{402D7911-28BD-46A1-8B92-3FDE9F3A4728}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{402D7911-28BD-46A1-8B92-3FDE9F3A4728}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{402D7911-28BD-46A1-8B92-3FDE9F3A4728}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F2CB47BE-3078-4DF1-8210-43F5542FC2A6} = {AC421317-D528-4D1D-B0CD-9F3252D06037}
+		{2CC14A83-1064-49C4-9C74-B41E8ED5EB15} = {6EE60173-6BCC-49B4-9C9D-7EA7E5080437}
+		{402D7911-28BD-46A1-8B92-3FDE9F3A4728} = {02EF75F0-C2C3-450E-A627-9D54AF5BA954}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DBAD231E-650A-42A0-A136-F42050C4BFDF}
+	EndGlobalSection
+EndGlobal
