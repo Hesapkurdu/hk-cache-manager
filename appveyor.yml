@@ -10,7 +10,7 @@ init:
 
 build_script:
 - ps: |
-    & .\build.cmd
+    & .\build.ps1
 test: off
 
 artifacts:
