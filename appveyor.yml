@@ -7,7 +7,10 @@ pull_requests:
 # See more detail here: https://github.com/ctaggart/SourceLink/wiki/Line-Endings
 init:
   - git config --global core.autocrlf input
-
+before_build:
+- choco install redis-64
+- redis-server --service-install
+- redis-server --service-start
 build_script:
 - ps: |
     & .\build.ps1
