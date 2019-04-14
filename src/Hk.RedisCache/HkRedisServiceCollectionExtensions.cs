@@ -13,7 +13,7 @@ namespace Hk.RedisCache
             {
                 x.ConnectionString = setupAction.ConnectionString;
                 x.DatabaseId = setupAction.DatabaseId;
-                x.Timeout = setupAction.Timeout != default ? setupAction.Timeout : TimeSpan.FromHours(1);
+                x.Timeout = setupAction.Timeout != TimeSpan.FromHours(0) ? setupAction.Timeout : TimeSpan.FromHours(1);
             });
             //Redis connection must be singleton according to stackexchange docs!
             services.AddSingleton<IHkRedisCacheDatabaseProvider, HkRedisCacheDatabaseProvider>();

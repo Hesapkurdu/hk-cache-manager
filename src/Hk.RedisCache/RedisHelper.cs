@@ -8,11 +8,11 @@ namespace Hk.RedisCache
     {
         public static string KeyGenerator<T>(T @object)
         {
-            if (@object is null) throw new ArgumentNullException($"{nameof(@object)} is null! Cannot generate key!");
+            if (@object == null) throw new ArgumentNullException($"{nameof(@object)} is null! Cannot generate key!");
             var type = @object.GetType();
             var idProperty = type.GetProperty("Id");
             var idPropertyValue = idProperty.GetValue(@object);
-            if (idPropertyValue is null)
+            if (idPropertyValue == null)
                 throw new ArgumentException($"{type.Name} should have Id Property! Otherwise please use other overload methods!");
             var idPropertTrimmedLowerCaseValue = idPropertyValue.ToString().Trim().ToLowerInvariant();
             var snakeCase = string.Concat(idPropertTrimmedLowerCaseValue.Select((x, i) => i > 0 && char.IsWhiteSpace(x) ? "_" + x.ToString() : x.ToString()));

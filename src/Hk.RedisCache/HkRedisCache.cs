@@ -70,7 +70,7 @@ namespace Hk.RedisCache
         public T GetFromCacheOrRun<T>(string cacheKey, Func<T> action)
         {
             var result = GetCache<T>(cacheKey);
-            if (result is null)
+            if (result == null)
             {
                 var invokeResult = action.Invoke();
                 SetCache(cacheKey, invokeResult);

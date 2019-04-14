@@ -72,8 +72,26 @@ Task("Build")
     }
 });
 
+Task("Run-Unit-Tests")
+    .Does(() =>{
+     DotNetCoreTest("./tests/Hk.RedisCacheTests/Hk.RedisCacheTests.csproj", new DotNetCoreTestSettings { Configuration = "Debug" });
+});
+
+Task("Pack")
+    .IsDependentOn("GitVersion")
+    .Does(() => 
+    {
+      DotNetCorePack("./src/Hk.RedisCache/Hk.RedisCache.csproj", new DotNetCorePackSettings {
+        OutputDirectory = "./Artifacts",
+        Configuration = "Release",
+        ArgumentCustomization = args => args.Append("/p:PackageVersion=" + gitVersion.NuGetVersionV2)
+      });  
+    });
+
 Task("Default")
 	.IsDependentOn("GitVersion")
-    .IsDependentOn("Build");    
+    .IsDependentOn("Build")
+    .IsDependentOn("Run-Unit-Tests")
+    .IsDependentOn("Pack");
 
 RunTarget(target);
