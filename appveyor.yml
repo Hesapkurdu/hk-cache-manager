@@ -1,0 +1,21 @@
+    
+image: Visual Studio 2017
+
+pull_requests:
+  do_not_increment_build_number: true
+
+# Is required by SourceLink to have valid file hashes.
+# See more detail here: https://github.com/ctaggart/SourceLink/wiki/Line-Endings
+init:
+  - git config --global core.autocrlf input
+
+build_script:
+- ps: |
+    & .\build.cmd BuildVersion=git BuildNumber=$($Env:APPVEYOR_BUILD_NUMBER)
+test: off
+
+artifacts:
+- path: artifacts\*.nupkg
+  name: NuGet
+
+deploy: off
