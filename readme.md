@@ -1,3 +1,5 @@
+[![Build status](https://ci.appveyor.com/api/projects/status/maxyeonv3cal84o9?svg=true)](https://ci.appveyor.com/project/obegendi/hkcachemanager)
+[![](https://img.shields.io/nuget/v/Hk.RedisCache.svg)](https://www.nuget.org/packages/Hk.RedisCache/)
 # Project Description
 Easy usage & cleaner code with cache related code.
 
