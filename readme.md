@@ -118,5 +118,5 @@ Install Visual Studio 2017 & .Net Core 2.1+ and run!
 
 `build.ps1`
 
-# Who uses AutoFixture?
+# Who uses this package?
 Hesapkurdu.com R&D team using at production!
