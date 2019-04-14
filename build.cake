@@ -39,13 +39,6 @@ Task("Restore-NuGet-Packages")
 		NoCache = true,
 		Verbosity = DotNetCoreVerbosity.Normal
 	});
-
-    NuGetRestore("./HkCacheManager.sln", new NuGetRestoreSettings 
-	{ 
-		NoCache = true,
-		Verbosity = NuGetVerbosity.Normal,
-		ToolPath = "./tools/nuget.exe"
-	});
 });
 
 Task("Build")
