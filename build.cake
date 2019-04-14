@@ -1,4 +1,3 @@
-#tool "nuget:?package=xunit.runner.console&version=2.4.0"
 #tool "nuget:?package=GitVersion.CommandLine&version=4.0.0"
 
 ///////////////////////////////////////////////////////////////////////////////
@@ -13,7 +12,7 @@ var toolpath = Argument("toolpath", @"");
 // PREPARATION
 ///////////////////////////////////////////////////////////////////////////////
 
-var buildDir = Directory("./Artifacts") + Directory(configuration);
+var buildDir = Directory("./artifacts") + Directory(configuration);
 GitVersion gitVersion = null; 
 
 ///////////////////////////////////////////////////////////////////////////////
@@ -82,14 +81,14 @@ Task("Pack")
     .Does(() => 
     {
       DotNetCorePack("./src/Hk.RedisCache/Hk.RedisCache.csproj", new DotNetCorePackSettings {
-        OutputDirectory = "./Artifacts",
+        OutputDirectory = "./artifacts",
         Configuration = "Release",
         ArgumentCustomization = args => args.Append("/p:PackageVersion=" + gitVersion.NuGetVersionV2)
       });  
     });
 
 Task("Default")
-	.IsDependentOn("GitVersion")
+	 .IsDependentOn("GitVersion")
     .IsDependentOn("Build")
     .IsDependentOn("Run-Unit-Tests")
     .IsDependentOn("Pack");
