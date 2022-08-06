@@ -1,7 +1,7 @@
 [![Build status](https://ci.appveyor.com/api/projects/status/maxyeonv3cal84o9?svg=true)](https://ci.appveyor.com/project/obegendi/hkcachemanager)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=Hesapkurdu_HkCacheManager&metric=alert_status)](https://sonarcloud.io/dashboard?id=Hesapkurdu_HkCacheManager)
 # Hesapkurdu.com Cache Manager
-Easy usage & cleaner code with cache related code.
+Easy usage & cleaner code with cache related code. 
 
 This project aims developers who use Redis as Cache Server. Provides easy API response cache, Entity/complex object cache, simple cache structure for developers.
 
